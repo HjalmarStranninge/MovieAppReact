@@ -6,7 +6,8 @@ export default function MovieList() {
 
     async function GetMovieList() {
         try {
-            const response = await axios.get('https://localhost:7127/api/Movies')
+            const response = await axios.get('https://188.149.208.99:7127/api/Movies');
+
             console.log(response)
             setMovies(response.data)
         } catch (error) {
@@ -18,7 +19,7 @@ export default function MovieList() {
         GetMovieList();
     }, [])
 
- 
+
     return (
         <div className="main-container">
             <h1>List of Movies</h1>
